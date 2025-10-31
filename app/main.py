@@ -1,10 +1,10 @@
 from fastapi import FastAPI
-from app.routes import extractor
+from app.routes import router
 
 app = FastAPI(title="SQL Extractor API")
 
 # inclui as rotas
-app.include_router(extractor.router)
+app.include_router(router.router)
 
 @app.get("/")
 def root():
